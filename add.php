@@ -1,4 +1,6 @@
 <?php 
+  require('template/dbconnect.php');
+
   // エラーメッセージ用配列
   $errors = [
     'pizza-name' => '',
