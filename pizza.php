@@ -22,8 +22,8 @@
     <div class="col-md-4">
       <div class="card">
         <div class="card-body">
-          <h3 class="card-title">ピザの名前</h3>
-          <p class="card-text">トッピング</p>
+          <h3 class="card-title"><?= $pizza['pizzaname']; ?></h3>
+          <p class="card-text"><?= $pizza['toppings']; ?></p>
         </div>
         <div class="card-footer">
           <a href="#" class="btn btn-primary">詳細を見る</a>

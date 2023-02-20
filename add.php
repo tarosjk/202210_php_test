@@ -33,9 +33,17 @@
 
     // エラー最終チェック
     if( !array_filter($errors) ) {
-      // pizza.phpにリダイレクト
-      header('location:pizza.php');
-      exit; //処理をストップ
+      $stmt = $db->prepare('INSERT INTO pizzas (pizzaname, chefname, toppings) VALUES (?,?,?) ');
+      $stmt->bindValue(1, $_POST['pizza-name']);
+      $stmt->bindValue(2, $_POST['chef-name']);
+      $stmt->bindValue(3, $_POST['toppings']);
+      $result = $stmt->execute(); //true / false
+
+      if($result) {
+        // pizza.phpにリダイレクト
+        header('location:pizza.php');
+        exit; //処理をストップ
+      }
     }
 
   }
