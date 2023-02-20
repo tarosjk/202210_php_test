@@ -26,7 +26,7 @@
           <p class="card-text"><?= $pizza['toppings']; ?></p>
         </div>
         <div class="card-footer">
-          <a href="#" class="btn btn-primary">詳細を見る</a>
+          <a href="detail.php?id=<?= $pizza['id']; ?>" class="btn btn-primary">詳細を見る</a>
         </div>
       </div>
     </div>
