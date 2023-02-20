@@ -25,6 +25,7 @@ if( isset($_GET['id']) ) {
 <div class="container">
   <h2 class="text-center display-4 my-5">Pizza Detail</h2>
 
+  <?php if( isset($pizza) && !empty($pizza) ): ?>
   <h3 class="text-center mb-5"><?= $pizza['pizzaname']; ?></h3>
 
   <div class="row justify-content-center">
@@ -36,6 +37,10 @@ if( isset($_GET['id']) ) {
       </div>
     </div>
   </div>
+
+  <?php else: ?>
+    <p>ピザのデータがありません。</p>
+  <?php endif; ?>
 
 </div>
 
